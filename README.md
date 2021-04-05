@@ -14,6 +14,6 @@ Now the program is UP and listening to localhost port 3000!
 
 To quickly test the program, run the following:
 ```
-curl -F 'file=/SOME_PATH/sales_json_to_csv_api/testing_files/small.csv' http://localhost:3000/sales/record
+curl -F 'file=/SOME_PATH/sales-csv-to-json-api/testing_files/small.csv' http://localhost:3000/sales/record
 ```
 where SOME_PATH is the path to the cloned repo

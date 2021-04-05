@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+    mongodb:
+      image: mongo
+      container_name: mongodb
+      ports:
+        - "27017:27017"
+
+    app:
+      image: sales-csv-to-json-api
+      container_name: sales-csv-to-json-api-instance
+      ports:
+        - "3000:3000"
