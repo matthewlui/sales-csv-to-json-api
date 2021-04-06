@@ -2,7 +2,7 @@
 <b>Prerequisite:</b></br>
 The host machine should have Docker and GNU Make installed.</br></br>
 
-<b>1. To start running the project, clone this repo, `cd` to the directory and run the followings:</b>
+<b>1. To start running the project, clone this repo, `cd` to the directory and run the following:</b>
 
 ```
 make start
