@@ -1,6 +1,6 @@
 # sales-csv-to-json-api
 <b>Prerequisite:</b></br>
-The host machine should have Docker and GNU Make installed.</br></br>
+The host machine should have <b>Docker</b> and <b>GNU Make</b> installed.</br></br>
 
 <b>1. To start running the project, clone this repo, `cd` to the directory and run the following:</b>
 
