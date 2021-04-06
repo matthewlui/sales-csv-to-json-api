@@ -1,4 +1,8 @@
-.PHONY: test mod-tidy
+.PHONY: start
+
+start:
+	docker build -t sales-csv-to-json-api .
+	docker-compose up -d
 
 test:
 	go test -v -cover ./...

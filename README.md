@@ -1,11 +1,11 @@
 # sales-csv-to-json-api
 <b>Prerequisite:</b></br>
-The host machine should have Docker installed.</br></br>
+The host machine should have Docker and GNU Make installed.</br></br>
 
-<b>1. To start running the project, clone this repo, `cd` to the directory and run the following:</b>
+<b>1. To start running the project, clone this repo, `cd` to the directory and run the followings:</b>
 
 ```
-docker-compose up -d
+make start
 ```
 
 Now the program is UP and listening to localhost port 3000!</br></br>
@@ -24,5 +24,5 @@ where SOME_PATH is the path of the cloned repo.</br></br>
 </br></br>
 <b>4. To run unit tests, run:</b>
 ```
-make
+make test
 ```
