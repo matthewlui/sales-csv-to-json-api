@@ -6,6 +6,7 @@ package mocks
 
 import (
 	reflect "reflect"
+	repo "wilfred404/sales-csv-to-json-api/repo"
 
 	gomock "github.com/golang/mock/gomock"
 	mongo "go.mongodb.org/mongo-driver/mongo"
@@ -32,6 +33,21 @@ func NewMockSalesRecordDB(ctrl *gomock.Controller) *MockSalesRecordDB {
 // EXPECT returns an object that allows the caller to indicate expected use.
 func (m *MockSalesRecordDB) EXPECT() *MockSalesRecordDBMockRecorder {
 	return m.recorder
+}
+
+// Find mocks base method.
+func (m *MockSalesRecordDB) Find(arg0 interface{}) (repo.Cursor, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "Find", arg0)
+	ret0, _ := ret[0].(repo.Cursor)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// Find indicates an expected call of Find.
+func (mr *MockSalesRecordDBMockRecorder) Find(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Find", reflect.TypeOf((*MockSalesRecordDB)(nil).Find), arg0)
 }
 
 // InsertMany mocks base method.

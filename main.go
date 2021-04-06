@@ -15,7 +15,9 @@ func main() {
 
 	router := httprouter.New()
 	router.POST("/sales/record", s.ReceiveSalesRecordHandler)
-	router.GET("/sales/report", s.DummyHandler)
+	router.GET("/sales/report", s.RetrieveSalesRecordHandler)
+	router.GET("/sales/report/:startDate", s.RetrieveSalesRecordHandler)
+	router.GET("/sales/report/:startDate/:endDate", s.RetrieveSalesRecordHandler)
 
 	fmt.Printf("Starting server at port 3000\n")
 	if err := http.ListenAndServe(":3000", router); err != nil {

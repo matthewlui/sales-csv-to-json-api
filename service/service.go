@@ -9,6 +9,7 @@ type Service struct {
 }
 
 func ProvideService() *Service {
+	//host := "localhost"
 	host := "host.docker.internal"
 	dbEndPoint := "mongodb://" + host + ":27017"
 	db := "salesDB"

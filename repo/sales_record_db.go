@@ -9,6 +9,7 @@ import (
 
 type SalesRecordDB interface {
 	InsertMany([]interface{}) (*mongo.InsertManyResult, error)
+	Find(interface{}) (Cursor, error)
 }
 
 type salesRecordDB struct {
@@ -24,4 +25,10 @@ func NewSalesRecordDB(dbEndPoint string, db string, collection string) SalesReco
 func (md *salesRecordDB) InsertMany(documents []interface{}) (*mongo.InsertManyResult, error) {
 	insertManyResult, err := md.collection.InsertMany(context.TODO(), documents)
 	return insertManyResult, err
+}
+
+func (md *salesRecordDB) Find(filter interface{}) (Cursor, error) {
+	mongoCursor, err := md.collection.Find(context.TODO(), filter)
+	cursor := NewCursor(mongoCursor)
+	return cursor, err
 }

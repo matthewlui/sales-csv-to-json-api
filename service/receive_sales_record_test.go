@@ -25,7 +25,7 @@ type receiveSalesRecordTestSuite struct {
 	Service *Service
 }
 
-func TestCreateCaseTestSuite(t *testing.T) {
+func TestReceiveSalesRecordTestSuite(t *testing.T) {
 	suite.Run(t, new(receiveSalesRecordTestSuite))
 }
 
@@ -63,7 +63,6 @@ func createPostRequest(fileName string) *http.Request {
 	io.Copy(part, file)
 	writer.Close()
 	request, err := http.NewRequest("POST", "/sales/record", body)
-
 	if err != nil {
 		log.Fatal(err)
 	}
